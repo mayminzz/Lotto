@@ -29,7 +29,6 @@ const lotto = () => {
     myNumber.add(Math.floor(Math.random() * maxNumber) + 1);
   }
 
-  // result.innerText = `${[...myNumber]}`;
   const arr = [...myNumber];
   console.log(arr);
   let output = "";
@@ -41,7 +40,7 @@ const lotto = () => {
   result.innerHTML = output;
 
   if (arr.length < 6) {
-    result.innerText = "중복숫자가 발생하였습니다. 재추첨합니다!";
+    lotto();
   }
 
   bonus();
